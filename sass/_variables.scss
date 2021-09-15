@@ -52,3 +52,12 @@ $font-sizes: (
 @function font-size($font-size-style) {
   @return map-get($font-sizes, $font-size-style);
 }
+
+$break-points: (
+  "break-point-tablet": 800px,
+  "break-point-desktop": 1300px,
+);
+
+@function break-point($break-point-size) {
+  @return map-get($break-points, $break-point-size);
+}

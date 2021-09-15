@@ -1,12 +1,24 @@
-@import './reset';
-@import './variables';
-@import './utilities';
-@import './header';
-@import './showcase';
-@import './motto';
-@import './features';
-@import './trainers';
-@import './testimonials';
-@import './clients';
-@import './register';
-@import './footer';
+// mixins
+@mixin media-desktop {
+  @media screen and (min-width: break-point(break-point-desktop)) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media screen and (max-width: break-point(break-point-tablet)) {
+    @content;
+  }
+}
+@import "./reset";
+@import "./variables";
+@import "./utilities";
+@import "./header";
+@import "./showcase";
+@import "./motto";
+@import "./features";
+@import "./trainers";
+@import "./testimonials";
+@import "./clients";
+@import "./register";
+@import "./footer";
