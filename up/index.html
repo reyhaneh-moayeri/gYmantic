@@ -7,8 +7,8 @@
     <!-- css file linked -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -19,7 +19,50 @@
   </head>
   <body class="container">
     <!-- header -->
-    <header class="header">Header</header>
+    <header class="header">
+      <!-- hamburgur lines -->
+      <div class="header__menu">
+        <div class="header__menu--line"></div>
+      </div>
+      <!-- header overlay -->
+
+      <div class="header__overlay"></div>
+
+      <!-- navigation -->
+
+      <nav class="header__nav">
+        <!-- logo -->
+        <a href="#" class="header__nav--logo"
+          ><img src="./img/logo/logo.svg" alt="logo"
+        /></a>
+
+        <!-- nav list -->
+
+        <ul class="header__nav--links">
+          <li class="header__nav--links__items">
+            <a href="#" data-text="Home">Home</a>
+          </li>
+          <li class="header__nav--links__items">
+            <a href="#" data-text="About">About</a>
+          </li>
+          <li class="header__nav--links__items">
+            <a href="#" data-text="Classes">Classes</a>
+          </li>
+          <li class="header__nav--links__items">
+            <a href="#" data-text="News">News</a>
+          </li>
+          <li class="header__nav--links__items">
+            <a href="#" data-text="Shop">Shop</a>
+          </li>
+
+          <!-- toggle button -->
+
+          <div class="header__nav--link__toggle-container">
+            <input type="checkbox" id="toggle" name="theme" />
+          </div>
+        </ul>
+      </nav>
+    </header>
 
     <!-- Showcase -->
     <section class="showcase">Showcase</section>
