@@ -8,14 +8,14 @@
 }
 
 html {
-  --color-primary: hsl(87, 98%, 34%);
-  --color-primary-m: hsl(87, 100%, 45%, 0.55);
-  --color-secondary: hsl(274, 99%, 72%);
-  --color-secondary-m: hsl(274, 99%, 72%, 0.6);
-  --color-tertiary: hsl(185, 36%, 47%);
+  --color-primary: #6d6875;
+  --color-primary-m: #3c096c;
+  --color-secondary: #ff8500;
+  --color-secondary-m: #ff6d00;
+  --color-tertiary: #ffb4a2;
   --color-tertiary-m: rgb(38, 52, 65, 0.65);
-  --color-quaternary: rgb(255, 235, 153);
-  --color-quaternary-m: rgb(192, 165, 43, 0.65);
+  --color-quaternary: #f19c79;
+  --color-quaternary-m: #e5989b;
   --color-quinary: white;
   --color-quinary-m: rgb(255, 255, 255, 0.5);
 }
@@ -23,8 +23,8 @@ html {
 html[data-theme="dark"] {
   --color-primary: rgb(36, 38, 43);
   --color-primary-m: rgba(36, 38, 43, 0.65);
-  --color-secondary: rgb(124, 185, 8);
-  --color-secondary-m: rgb(123, 185, 8, 0.5);
+  --color-secondary: #6c757d;
+  --color-secondary-m: #495057;
   --color-tertiary: rgb(38, 52, 65);
   --color-tertiary-m: hsl(183, 34%, 38%, 0.65);
   --color-quaternary: hsl(220, 10%, 28%);
@@ -170,7 +170,7 @@ a {
 }
 
 .header__nav--links__toggle-container input:checked[type="checkbox"] {
-  background-color: greenyellow;
+  background-color: #bde0fe;
 }
 
 .header__nav--links__toggle-container input:not(:checked)[type="checkbox"] {
@@ -279,31 +279,28 @@ a {
     top: 2rem;
     right: 2rem;
     padding: 2.5rem;
-    background-color: red;
-    z-index: 20;
+    z-index: 21;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .header__menu--line, .header__menu--line::before, .header__menu--line::after {
     content: "";
     position: absolute;
     width: 3.5rem;
     height: 2px;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
     background-color: white;
     transition: all 0.5s ease-in-out;
     z-index: 20;
   }
   .header__menu--line::before {
-    top: -2.2rem;
+    top: -1rem;
   }
   .header__menu--line::after {
-    top: 1.2rem;
+    top: 1rem;
   }
-  .header__overlay {
+  .header.open .header__overlay {
     display: block;
     opacity: 0.8;
   }
@@ -376,5 +373,13 @@ a {
   background-color: var(--color-secondary-m);
   grid-column: container-start / container-end;
   height: 200px;
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+  transition: all 0.8s !important;
+  transition-delay: 0 !important;
 }
 /*# sourceMappingURL=style.css.map */
