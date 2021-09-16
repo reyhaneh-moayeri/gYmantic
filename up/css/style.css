@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap");
+::selection {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
 *,
 *::before,
 *::after {
@@ -8,10 +13,10 @@
 }
 
 html {
-  --color-primary: #6d6875;
+  --color-primary: #83c5be;
   --color-primary-m: #3c096c;
-  --color-secondary: #ff8500;
-  --color-secondary-m: #ff6d00;
+  --color-secondary: #a2d2ff;
+  --color-secondary-m: #4cc9f0;
   --color-tertiary: #ffb4a2;
   --color-tertiary-m: rgb(38, 52, 65, 0.65);
   --color-quaternary: #f19c79;
@@ -47,6 +52,12 @@ body {
   display: grid;
   grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
   grid-template-rows: min-content 90vh repeat(9, min-content);
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    grid-template-rows: min-content 100vh repeat(9, min-content);
+  }
 }
 
 li {
@@ -329,8 +340,88 @@ a {
 }
 
 .showcase {
-  background-color: var(--color-tertiary);
   grid-column: container-start / container-end;
+  background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)), url("../img/showcase/showcase-bg.jpg");
+}
+
+.showcase__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase__content--title {
+  text-align: center;
+  font-size: calc(1.5rem + 5vw);
+  font-weight: 300;
+  background-image: linear-gradient(135deg, var(--color-secondary), var(--color-quinary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.showcase__content--para {
+  font-size: calc(1.2rem + 1vw);
+  font-weight: 300;
+  color: var(--color-quinary);
+  margin-bottom: calc(1rem + 2vw);
+}
+
+.showcase__content--links {
+  display: flex;
+  justify-content: center;
+}
+
+.showcase__content--links a {
+  font-size: calc(1.2rem + 0.5vw);
+  padding: calc(0.5rem + 1vh) calc(1rem + 1vw);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.showcase__content--links a:first-child {
+  background-color: var(--color-tertiary);
+  border: 0.2rem solid var(--color-tertiary);
+  color: var(--color-quinary);
+  margin-right: calc(1rem + 2vw);
+}
+
+.showcase__content--links a:last-child {
+  background-color: var(--color-secondary);
+  border: 0.2rem solid var(--color-secondary);
+  color: var(--color-quinary);
+}
+
+.showcase__content--links a:first-child:before,
+.showcase__content--links a:last-child:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-quinary);
+  border-radius: inherit;
+  z-index: -1;
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.showcase__content--links a:hover:first-child::before,
+.showcase__content--links a:hover:last-child::before {
+  transform: scale(1);
+}
+
+.showcase__content--links a:hover:first-child {
+  color: var(--color-secondary);
+  font-weight: 400;
+}
+
+.showcase__content--links a:hover:last-child {
+  color: var(--color-tertiary);
+  font-weight: 400;
 }
 
 .motto {
@@ -373,6 +464,22 @@ a {
   background-color: var(--color-secondary-m);
   grid-column: container-start / container-end;
   height: 200px;
+}
+
+.showcase {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.showcase {
+  padding: 6vh 4vw;
+}
+
+.showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 html.transition,

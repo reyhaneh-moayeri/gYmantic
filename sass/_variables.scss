@@ -1,12 +1,12 @@
 html {
-  --color-primary: hsl(87, 98%, 34%);
-  --color-primary-m: hsl(87, 100%, 45%, 0.55);
-  --color-secondary: hsl(274, 99%, 72%);
-  --color-secondary-m: hsl(274, 99%, 72%, 0.6);
-  --color-tertiary: hsl(185, 36%, 47%);
+  --color-primary: #83c5be;
+  --color-primary-m: #3c096c;
+  --color-secondary: #a2d2ff;
+  --color-secondary-m: #4cc9f0;
+  --color-tertiary: #ffb4a2;
   --color-tertiary-m: rgb(38, 52, 65, 0.65);
-  --color-quaternary: rgb(255, 235, 153);
-  --color-quaternary-m: rgb(192, 165, 43, 0.65);
+  --color-quaternary: #f19c79;
+  --color-quaternary-m: #e5989b;
   --color-quinary: white;
   --color-quinary-m: rgb(255, 255, 255, 0.5);
 }
@@ -14,8 +14,8 @@ html {
 html[data-theme="dark"] {
   --color-primary: rgb(36, 38, 43);
   --color-primary-m: rgba(36, 38, 43, 0.65);
-  --color-secondary: rgb(124, 185, 8);
-  --color-secondary-m: rgb(123, 185, 8, 0.5);
+  --color-secondary: #6c757d;
+  --color-secondary-m: #495057;
   --color-tertiary: rgb(38, 52, 65);
   --color-tertiary-m: hsl(183, 34%, 38%, 0.65);
   --color-quaternary: hsl(220, 10%, 28%);
@@ -43,10 +43,10 @@ $font-weights: (
 
 $font-sizes: (
   "font-size-small": calc(1.2rem + 0.5vw),
-  "font-weight-regular": calc(1.2rem + 1vw),
-  "font-weight-medium": calc(1.5rem + 2vw),
-  "font-weight-large": calc(1.5rem + 5vw),
-  "font-weight-xlarge": calc(2.5rem + 5vw),
+  "font-size-regular": calc(1.2rem + 1vw),
+  "font-size-medium": calc(1.5rem + 2vw),
+  "font-size-large": calc(1.5rem + 5vw),
+  "font-size-xlarge": calc(2.5rem + 5vw),
 );
 
 @function font-size($font-size-style) {
