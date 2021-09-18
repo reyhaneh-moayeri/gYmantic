@@ -466,9 +466,108 @@ a {
 }
 
 .motto {
-  background-color: var(--color-quaternary);
   grid-column: container-start / container-end;
-  height: 500px;
+  background-image: url("../img/motto/motto-bg.jpg");
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 2rem;
+  place-items: center;
+}
+
+.motto__content {
+  display: grid;
+  grid-row-gap: 4vh;
+  background-color: var(--color-tertiary-m);
+  padding: 0.7rem;
+}
+
+.motto__content i {
+  font-size: calc(1.5rem + 2vw);
+  color: var(--color-primary);
+}
+
+.motto__content--link {
+  background: none;
+  place-self: start;
+  padding: 0.7rem 1.5rem;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  font-size: calc(1.2rem + 1vw);
+}
+
+.motto__content--link span {
+  display: block;
+  position: absolute;
+}
+
+.motto__content--link span:first-child {
+  top: 0;
+  left: -100%;
+  background-image: linear-gradient(90deg, transparent, var(--color-primary));
+  width: 100%;
+  height: 0.3rem;
+  transition: 0.5s;
+  transition-delay: 1s;
+}
+
+.motto__content--link span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  background-image: linear-gradient(180deg, transparent, var(--color-primary));
+  width: 0.3rem;
+  height: 100%;
+  transition: 0.5s;
+  transition-delay: 0.75s;
+}
+
+.motto__content--link span:nth-child(3) {
+  right: -100%;
+  bottom: 0;
+  background-image: linear-gradient(270deg, transparent, var(--color-primary));
+  width: 100%;
+  height: 0.3rem;
+  transition: 0.7s;
+  transition-delay: 0.25s;
+}
+
+.motto__content--link span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  background-image: linear-gradient(360deg, transparent, var(--color-primary));
+  width: 0.3rem;
+  height: 100%;
+  transition: 0.5s;
+  transition-delay: 0.75s;
+}
+
+.motto__content--link:hover {
+  background: var(--color-primary);
+  transition-delay: 1s;
+}
+
+.motto__content--link:hover span:first-child {
+  transition-duration: 1s;
+  transition-delay: 0s;
+  left: 100%;
+}
+
+.motto__content--link:hover span:nth-child(2) {
+  transition-duration: 1s;
+  transition-delay: 0.25s;
+  top: 100%;
+}
+
+.motto__content--link:hover span:nth-child(3) {
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+  right: 100%;
+}
+
+.motto__content--link:hover span:nth-child(4) {
+  transition-duration: 1s;
+  transition-delay: 1s;
+  bottom: 100%;
 }
 
 .features {
@@ -507,14 +606,28 @@ a {
   height: 200px;
 }
 
-.showcase {
+.showcase, .motto {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.showcase {
+.showcase, .motto {
   padding: 6vh 4vw;
+}
+
+.motto__content--title {
+  font-size: calc(1.5rem + 2vw);
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  color: var(--color-quinary);
+}
+
+.motto__content--para {
+  font-size: calc(1.2rem + 0.5vw);
+  letter-spacing: 0.2rem;
+  color: var(--color-quinary);
+  font-family: "Balsamiq Sans", cursive;
 }
 
 .showcase {
