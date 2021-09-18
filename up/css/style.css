@@ -126,7 +126,8 @@ a {
   display: flex;
 }
 
-.header__nav--links__items a {
+.header__nav--links__items a:link,
+.header__nav--links__items a:active {
   margin-right: 2vw;
   padding: 0 1.5rem;
   position: relative;
@@ -422,6 +423,46 @@ a {
 .showcase__content--links a:hover:last-child {
   color: var(--color-tertiary);
   font-weight: 400;
+}
+
+@media screen and (max-width: 800px) {
+  .showcase {
+    justify-content: flex-start !important;
+    align-items: flex-end !important;
+  }
+  .showcase__content--title {
+    text-align: left;
+  }
+  .showcase__content--links {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .showcase {
+    padding: 4rem !important;
+  }
+  .showcase__content--title {
+    font-size: calc(2.5rem + 5vw);
+    font-weight: 400;
+  }
+  .showcase__content--para {
+    font-size: 2rem;
+  }
+  .showcase__content--links a {
+    font-size: calc(1.2rem + 0.5vw);
+    flex-shrink: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .showcase__content--links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .showcase__content--links a {
+    margin-bottom: 1rem;
+  }
 }
 
 .motto {

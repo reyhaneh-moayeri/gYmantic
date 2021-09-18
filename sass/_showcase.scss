@@ -88,4 +88,49 @@
       }
     }
   }
+
+  // media query 800
+  @include media-tablet {
+    justify-content: flex-start !important;
+    align-items: flex-end !important;
+    &__content {
+      &--title {
+        text-align: left;
+      }
+      &--links {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  @include media-medium {
+    padding: 4rem !important;
+    &__content {
+      &--title {
+        font-size: font-size(font-size-xlarge);
+        font-weight: font-weight(font-weight-regular);
+      }
+      &--para {
+        font-size: 2rem;
+      }
+      &--links {
+        a {
+          font-size: font-size(font-size-small);
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  @include media-small {
+    &__content {
+      &--links {
+        flex-direction: column;
+        align-items: flex-start;
+        a {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
 }
