@@ -253,12 +253,14 @@ a {
   .header__nav--links__items {
     animation: initial;
   }
-  .header__nav--links__items a {
-    transform-origin: left;
+  .header__nav--links__items a:link,
+  .header__nav--links__items a:active {
     margin-right: initial;
     padding: 2rem;
     font-size: 1.2rem;
     position: relative;
+    transform-origin: left;
+    margin: 0;
   }
   .header__nav--links__items a:hover,
   .header__nav--links__items a:active {
