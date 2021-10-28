@@ -1,5 +1,126 @@
 .register {
-  background-color: var(--color-tertiary);
   grid-column: container-start / container-end;
-  height: 500px;
+  background-image: url(../img/register/register-bg.jpg);
+  @extend %bg;
+  @extend %section-padding;
+  color: var(--color-quinary);
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__progress {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    grid-gap: 2rem;
+
+    &--step {
+      font-size: 2rem;
+      background-color: var(--color-tertiary-m);
+      border-radius: 50%;
+      height: 6rem;
+      width: 6rem;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+      transition: 0.5s ease-in;
+
+      i {
+        font-size: font-size(font-size-small);
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: orangered;
+      }
+      i.active {
+        display: block;
+      }
+      span.active {
+        display: none;
+      }
+    }
+
+    &--step.active {
+      background-color: var(--color-quinary);
+    }
+  }
+
+  &__content {
+    width: 28rem;
+    overflow: hidden;
+    margin-top: 2rem;
+    &--form {
+      display: flex;
+      justify-content: center;
+      width: 400%;
+      &__page {
+        width: 50%;
+        display: grid;
+        grid-template-rows: repeat(3, 7rem);
+        grid-row-gap: 4rem;
+        align-items: start;
+        transition: margin 0.5s ease-in-out;
+
+        &--field {
+          height: 4rem;
+          width: 28rem;
+
+          label {
+            font-size: 2rem;
+          }
+          input,
+          select {
+            height: 100%;
+            width: 100%;
+            font-size: 1.5rem;
+            padding-left: 1rem;
+            letter-spacing: 0.2rem;
+            border: none;
+            outline: none;
+            background-color: var(--color-tertiary-m);
+            color: var(--color-quinary);
+            font-family: "Balsamiq Sans", cursive;
+          }
+
+          select {
+            color: #000;
+          }
+
+          input:focus {
+            background-color: var(--color-secondary-m);
+            color: #000;
+          }
+
+          button {
+            width: 100%;
+            height: 100%;
+            padding: 0.8rem 1.2rem;
+            border-radius: 0;
+            border: none;
+            cursor: pointer;
+            background-color: var(--color-tertiary-m);
+            color: var(--color-quinary);
+            font-family: "Balsamiq Sans", cursive;
+            font-size: 1.8rem;
+            transition: 0.5s ease-in-out;
+          }
+
+          button:hover {
+            background-color: green;
+          }
+        }
+        .btns {
+          display: flex;
+          button:first-child {
+            margin-right: 0.5rem;
+          }
+          button:last-child {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
 }

@@ -461,7 +461,114 @@
     </div>
     <!-- Register -->
 
-    <section class="register">Register</section>
+    <section class="register">
+      <!-- register progress -->
+      <div class="register__progress">
+        <div class="register__progress--step">
+          <span>1</span>
+          <i class="fa fa-check"></i>
+        </div>
+        <div class="register__progress--step">
+          <span>2</span>
+          <i class="fa fa-check"></i>
+        </div>
+        <div class="register__progress--step">
+          <span>3</span>
+          <i class="fa fa-check"></i>
+        </div>
+        <div class="register__progress--step">
+          <span>4</span>
+          <i class="fa fa-check"></i>
+        </div>
+      </div>
+
+      <!-- register content -->
+      <div class="register__content">
+        <div class="register__content--form">
+          <!-- first page -->
+          <div class="register__content--form__page">
+            <!-- firstName -->
+            <div class="register__content--form__page--field">
+              <label for="first-name">FirstName</label>
+              <input type="text" placeholder="FirstName" />
+            </div>
+            <!-- lastName -->
+            <div class="register__content--form__page--field">
+              <label for="last-name">LastName</label>
+              <input type="text" placeholder="lastName" />
+            </div>
+
+            <!-- next buuton -->
+            <div class="register__content--form__page--field">
+              <button class="next-1 next">Next</button>
+            </div>
+          </div>
+
+          <!-- second page -->
+          <div class="register__content--form__page">
+            <!-- Email Address-->
+            <div class="register__content--form__page--field">
+              <label for="email-address">Email Address</label>
+              <input type="email" />
+            </div>
+            <!-- Phone Number -->
+            <div class="register__content--form__page--field">
+              <label for="phone-number">Phone Number</label>
+              <input type="number" />
+            </div>
+
+            <!-- next buuton -->
+            <div class="register__content--form__page--field btns">
+              <button class="prev prev-1">Previous</button>
+              <button class="next-2 next">Next</button>
+            </div>
+          </div>
+
+          <!-- third page -->
+          <div class="register__content--form__page">
+            <!-- Date Of Birth-->
+            <div class="register__content--form__page--field">
+              <label for="date-of-birth">Date of Birth</label>
+              <input type="text" />
+            </div>
+            <!-- Gender -->
+            <div class="register__content--form__page--field">
+              <label for="gender">Gender</label>
+              <select>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- next buuton -->
+            <div class="register__content--form__page--field btns">
+              <button class="prev prev-2">Previous</button>
+              <button class="next-3 next">Next</button>
+            </div>
+          </div>
+          <!-- forth page -->
+          <div class="register__content--form__page">
+            <!-- Username-->
+            <div class="register__content--form__page--field">
+              <label for="username">UserName</label>
+              <input type="text" />
+            </div>
+            <!-- Password -->
+            <div class="register__content--form__page--field">
+              <label for="password">Password</label>
+              <input type="password" />
+            </div>
+
+            <!-- next buuton -->
+            <div class="register__content--form__page--field btns">
+              <button class="prev prev-3">Previous</button>
+              <button class="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">Footer</footer>
@@ -472,6 +579,9 @@
     <script src="./js/dark-mode.js"></script>
     <!-- testimpnoals -->
     <script src="./js/testimonials.js"></script>
+    <!-- scroll up  -->
     <script src="./js/scroll-up.js"></script>
+    <!-- register form -->
+    <script src="./js/register.js"></script>
   </body>
 </html>
