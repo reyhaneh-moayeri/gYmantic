@@ -1036,6 +1036,37 @@ a {
   align-items: center;
 }
 
+.scroll {
+  position: fixed;
+  bottom: 4rem;
+  width: 5rem;
+  height: 5rem;
+  right: 4rem;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: purple;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 30;
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateY(-50rem);
+}
+
+.scroll i {
+  color: var(--color-quinary);
+  font-size: calc(1.2rem + 1vw);
+}
+
+.scroll.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 html.transition,
 html.transition *,
 html.transition *::before,
