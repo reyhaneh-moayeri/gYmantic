@@ -1123,18 +1123,175 @@ a {
 }
 
 .footer {
-  background-color: var(--color-secondary-m);
+  background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)), url("../img/footer/footer-bg.jpg");
   grid-column: container-start / container-end;
-  height: 200px;
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  grid-row-gap: 8vh;
 }
 
-.showcase, .motto, .features__content:nth-child(1), .features__content:nth-child(2), .features__content:nth-child(3), .features__content:nth-child(4), .features__content:nth-child(5), .features__content:nth-child(6), .features__content:nth-child(7), .features__content:nth-child(8), .features__content:nth-child(9), .testimonials, .clients, .register {
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25rem);
+  place-content: center;
+  grid-gap: 10rem 4vw;
+}
+
+.footer__content--section {
+  display: grid;
+  grid-row-gap: 1.5rem;
+}
+
+.footer__content--section__title {
+  font-size: calc(1.2rem + 1vw);
+  color: var(--color-quinary);
+}
+
+.footer__content--section__link {
+  display: block;
+  letter-spacing: initial;
+  font-size: calc(1.2rem + 0.5vw);
+}
+
+.footer__content--section__para {
+  color: var(--color-quinary);
+  font-weight: 300;
+  font-size: calc(1.2rem + 0.5vw);
+}
+
+.footer__content--section:first-child, .footer__content--section:nth-child(2), .footer__content--section:nth-child(3) {
+  border-right: 0.15rem solid var(--color-quinary);
+}
+
+.footer__content--section:nth-child(3) {
+  padding-right: 4vw;
+}
+
+.footer__content--section:nth-child(3) input[type="email"] {
+  padding: 1rem;
+  background-color: transparent;
+  border-bottom: 0;
+  border-right: 0;
+  color: var(--color-quinary);
+}
+
+.footer__content--section:nth-child(3) input[type="email"]:focus {
+  border-bottom: 0;
+  border-right: 0;
+  outline: none;
+}
+
+.footer__content--section:nth-child(3) input[type="submit"] {
+  background-color: transparent;
+  border: 0.1rem solid var(--color-quinary);
+  font-size: 1.5rem;
+  color: var(--color-quinary);
+  cursor: pointer;
+  padding: 1rem 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.footer__content--section:nth-child(3) input[type="submit"]:hover {
+  background-color: var(--color-quinary);
+  color: #000;
+}
+
+.footer__content--section:last-child {
+  padding-bottom: 4vw;
+  border-bottom: 0.1rem solid var(--color-quinary);
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__logo img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.footer__logo span {
+  margin-left: 2rem;
+  color: var(--color-quinary);
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__social--call {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer__social--call i {
+  font-size: 3rem;
+}
+
+.footer__social--call p {
+  margin-left: 2rem;
+}
+
+.footer__social--icons {
+  display: flex;
+}
+
+.footer__social--icons__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 0.1rem solid var(--color-quinary);
+  position: relative;
+  z-index: 1;
+}
+
+.footer__social--icons__link:link::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: -1;
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
+  background-color: var(--color-quinary);
+}
+
+.footer__social--icons__link:hover::before {
+  transform: scale(1);
+}
+
+.footer i {
+  font-size: 2.5rem;
+  color: green;
+}
+
+@media screen and (max-width: 600px) {
+  .footer__social {
+    justify-content: center;
+  }
+}
+
+.showcase, .motto, .features__content:nth-child(1), .features__content:nth-child(2), .features__content:nth-child(3), .features__content:nth-child(4), .features__content:nth-child(5), .features__content:nth-child(6), .features__content:nth-child(7), .features__content:nth-child(8), .features__content:nth-child(9), .testimonials, .clients, .register, .footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.showcase, .motto, .trainers, .testimonials, .clients, .register {
+.showcase, .motto, .trainers, .testimonials, .clients, .register, .footer {
   padding: 6vh 4vw;
 }
 
@@ -1145,7 +1302,7 @@ a {
   color: var(--color-quinary);
 }
 
-.motto__content--para, .features__content--para, .testimonials__content--slider__slide--para {
+.motto__content--para, .features__content--para, .testimonials__content--slider__slide--para, .footer__social--call p {
   font-size: calc(1.2rem + 0.5vw);
   letter-spacing: 0.2rem;
   color: var(--color-quinary);
